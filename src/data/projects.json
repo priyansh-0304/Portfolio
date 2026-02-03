@@ -1,0 +1,64 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Expense Tracker",
+      "shortDescription": "Full-stack expense management with JWT auth & analytics",
+      "description": "Full-stack expense management platform with JWT-based authentication and stateless REST APIs. Features pagination, filtering, analytics dashboards, CSV export, and undo-safe CRUD operations. Deployed on Render (backend) and Vercel (frontend).",
+      "techStack": ["React.js", "Spring Boot", "PostgreSQL", "JWT", "Docker"],
+      "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=400&fit=crop",
+      "githubLink": "https://github.com/priyansh-0304/expense-tracker-frontend",
+      "demoLink": "https://expense-tracker-frontend-psi-ochre.vercel.app/",
+      "featured": true,
+      "date": "Jan 2026 – Feb 2026"
+    },
+    {
+      "id": 2,
+      "title": "MediVision",
+      "shortDescription": "AI-powered medical image analysis for disease diagnosis",
+      "description": "AI-powered multi-disease medical image analysis system using CNNs to automate diagnosis across 5+ diseases. Features interactive Streamlit UI with confidence visualization, projecting 40% reduction in manual lookup time.",
+      "techStack": ["Python", "TensorFlow", "Streamlit", "CNN"],
+      "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=400&fit=crop",
+      "githubLink": "https://github.com/priyansh-0304/MediVision",
+      "demoLink": "#",
+      "featured": true,
+      "date": "Oct 2025 – Dec 2025"
+    },
+    {
+      "id": 3,
+      "title": "Job Portal",
+      "shortDescription": "Role-based job portal for recruiters and applicants",
+      "description": "Full-stack job portal with role-based access control for recruiters and applicants. Secure JWT authentication, protected API routes, and automated job tracking that reduced recruiter workflow time by 35%.",
+      "techStack": ["React.js", "Node.js", "MySQL", "JWT", "Tailwind CSS"],
+      "image": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&h=400&fit=crop",
+      "githubLink": "https://github.com/priyansh-0304/job-portal-frontend",
+      "demoLink": "https://job-portal-frontend-one-ivory.vercel.app/",
+      "featured": true,
+      "date": "Jun 2025 – Jul 2025"
+    },
+    {
+      "id": 4,
+      "title": "Text-to-Speech App",
+      "shortDescription": "Neural voice synthesis using Amazon Polly",
+      "description": "Web application using Amazon Polly for neural voice synthesis. Features real-time audio playback and downloadable speech output for seamless text-to-speech conversion.",
+      "techStack": ["React.js", "AWS Polly", "Node.js"],
+      "image": "https://images.unsplash.com/photo-1589903308904-1010c2294adc?w=600&h=400&fit=crop",
+      "githubLink": "https://github.com/priyansh-0304/Text-to-Speech",
+      "demoLink": "#",
+      "featured": false,
+      "date": "Apr 2025 – May 2025"
+    },
+    {
+      "id": 5,
+      "title": "Crop Detection & Yield Prediction",
+      "shortDescription": "Satellite-based crop detection using YOLOv8 & NDVI",
+      "description": "Satellite-image-based crop detection and yield prediction pipeline using YOLOv8. Improved prediction reliability through NDVI-based vegetation analysis.",
+      "techStack": ["Python", "YOLOv8", "Machine Learning", "NDVI"],
+      "image": "https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=600&h=400&fit=crop",
+      "githubLink": "#",
+      "demoLink": "#",
+      "featured": false,
+      "date": "Oct 2024 – Nov 2024"
+    }
+  ]
+}
