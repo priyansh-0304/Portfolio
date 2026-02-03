@@ -162,9 +162,9 @@ export default function Contact() {
             {/* Decorative element */}
             <div className="hidden lg:block pt-8">
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-rose-500 rounded-2xl blur-2xl opacity-20" />
+                <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-amber-500 rounded-2xl blur-2xl opacity-20" />
                 <Card variant="glass" className="relative p-6">
-                  <p className="text-slate-600 dark:text-slate-300 italic">
+                  <p className="text-stone-600 dark:text-stone-300 italic">
                     "Great things are built with collaboration. Let's create something amazing together."
                   </p>
                 </Card>

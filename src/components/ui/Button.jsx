@@ -2,34 +2,34 @@ import { forwardRef } from 'react';
 
 const variants = {
   primary: `
-    bg-indigo-500 text-white
-    hover:bg-indigo-600
-    active:bg-indigo-700
-    shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/40
-    dark:bg-indigo-500 dark:hover:bg-indigo-400
+    bg-orange-500 text-white
+    hover:bg-orange-600
+    active:bg-orange-700
+    shadow-lg shadow-orange-500/25 hover:shadow-orange-500/40
+    dark:bg-orange-500 dark:hover:bg-orange-400
   `,
   secondary: `
-    bg-transparent text-indigo-600
-    border-2 border-indigo-500
-    hover:bg-indigo-50
-    active:bg-indigo-100
-    dark:text-indigo-400 dark:border-indigo-400
-    dark:hover:bg-indigo-950/50
+    bg-transparent text-orange-600
+    border-2 border-orange-500
+    hover:bg-orange-50
+    active:bg-orange-100
+    dark:text-orange-400 dark:border-orange-400
+    dark:hover:bg-orange-950/50
   `,
   ghost: `
-    bg-slate-100 text-slate-700
-    border border-slate-300
-    hover:bg-slate-200 hover:border-slate-400
-    active:bg-slate-300
-    dark:bg-transparent dark:text-slate-300 dark:border-slate-600
-    dark:hover:bg-slate-800 dark:hover:border-slate-500
+    bg-stone-100 text-stone-700
+    border border-stone-300
+    hover:bg-stone-200 hover:border-stone-400
+    active:bg-stone-300
+    dark:bg-transparent dark:text-stone-300 dark:border-stone-600
+    dark:hover:bg-stone-800 dark:hover:border-stone-500
   `,
   accent: `
-    bg-teal-500 text-white
-    hover:bg-teal-600
-    active:bg-teal-700
+    bg-amber-500 text-white
+    hover:bg-amber-600
+    active:bg-amber-700
     shadow-lg
-    dark:bg-teal-500 dark:hover:bg-teal-400
+    dark:bg-amber-500 dark:hover:bg-amber-400
   `,
 };
 
@@ -58,8 +58,8 @@ const Button = forwardRef(({
     font-semibold rounded-xl
     transition-all duration-300 ease-out
     transform hover:-translate-y-0.5
-    focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:ring-offset-2
-    dark:focus:ring-offset-slate-900
+    focus:outline-none focus:ring-2 focus:ring-orange-500/50 focus:ring-offset-2
+    dark:focus:ring-offset-stone-900
     disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none disabled:hover:shadow-none
   `;
 

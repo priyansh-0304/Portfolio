@@ -2,28 +2,28 @@ import { forwardRef } from 'react';
 
 const variants = {
   default: `
-    bg-slate-100 dark:bg-slate-800
-    border border-slate-200 dark:border-slate-700
+    bg-stone-50 dark:bg-stone-800
+    border border-stone-200 dark:border-stone-700
   `,
   elevated: `
-    bg-slate-100 dark:bg-slate-800
+    bg-stone-50 dark:bg-stone-800
     shadow-lg hover:shadow-xl
-    dark:shadow-slate-900/20
+    dark:shadow-stone-900/20
   `,
   glass: `
-    bg-slate-100/70 dark:bg-slate-800/70
+    bg-stone-50/70 dark:bg-stone-800/70
     backdrop-blur-md
-    border border-slate-200/50 dark:border-slate-700/50
+    border border-stone-200/50 dark:border-stone-700/50
   `,
   gradient: `
-    bg-gradient-to-br from-slate-100 to-slate-200
-    dark:from-slate-800 dark:to-slate-900
-    border border-slate-200 dark:border-slate-700
+    bg-gradient-to-br from-stone-50 to-stone-100
+    dark:from-stone-800 dark:to-stone-900
+    border border-stone-200 dark:border-stone-700
   `,
   interactive: `
-    bg-slate-100 dark:bg-slate-800
+    bg-stone-50 dark:bg-stone-800
     shadow-lg hover:shadow-xl
-    dark:shadow-slate-900/20
+    dark:shadow-stone-900/20
     cursor-pointer
   `,
 };

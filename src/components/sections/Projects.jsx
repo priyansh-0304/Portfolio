@@ -152,8 +152,8 @@ function FilterButton({ children, active, onClick }) {
       onClick={onClick}
       className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
         active
-          ? "bg-indigo-600 text-white shadow-lg shadow-indigo-500/25"
-          : "bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700 hover:text-slate-900 dark:hover:text-white"
+          ? "bg-orange-600 text-white shadow-lg shadow-orange-500/25"
+          : "bg-stone-100 dark:bg-stone-800 text-stone-600 dark:text-stone-400 hover:bg-stone-200 dark:hover:bg-stone-700 hover:text-stone-900 dark:hover:text-white"
       }`}
     >
       {children}
@@ -169,83 +169,95 @@ function ProjectCard({ project, index, onClick }) {
   };
 
   return (
-    <Card
-      variant="elevated"
-      padding="none"
-      className="group overflow-hidden animate-fade-in-up cursor-pointer"
+    <div
+      className="group relative animate-fade-in-up cursor-pointer"
       style={{ animationDelay: `${index * 100}ms` }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       onClick={onClick}
     >
-      {/* Project Image */}
-      <div className="relative h-56 overflow-hidden">
-        <img
-          src={project.image}
-          alt={project.title}
-          className={`w-full h-full object-cover transition-all duration-700 ${
-            isHovered ? "scale-110 blur-[2px]" : "scale-100"
-          }`}
-        />
+      {/* Glow effect - appears on hover */}
+      <div 
+        className={`absolute -inset-0.5 bg-gradient-to-r from-orange-500 via-amber-500 to-yellow-400 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500 ${
+          isHovered ? "opacity-75" : ""
+        }`}
+      />
+      
+      {/* Card content */}
+      <Card
+        variant="elevated"
+        padding="none"
+        className="relative overflow-hidden transform transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-2xl group-hover:shadow-orange-500/10"
+      >
+        {/* Project Image */}
+        <div className="relative h-56 overflow-hidden">
+          <img
+            src={project.image}
+            alt={project.title}
+            className={`w-full h-full object-cover transition-all duration-700 ${
+              isHovered ? "scale-110" : "scale-100"
+            }`}
+          />
 
-        {/* Featured Badge */}
-        {project.featured && (
-          <div className="absolute top-4 left-4 z-10">
-            <span className="px-3 py-1 bg-gradient-to-r from-indigo-600 to-rose-500 text-white text-xs font-semibold rounded-full shadow-lg">
-              Featured
-            </span>
-          </div>
-        )}
+          {/* Featured Badge */}
+          {project.featured && (
+            <div className="absolute top-4 left-4 z-10">
+              <span className="px-3 py-1 bg-gradient-to-r from-orange-600 to-amber-500 text-white text-xs font-semibold rounded-full shadow-lg">
+                Featured
+              </span>
+            </div>
+          )}
 
-        {/* Overlay with links */}
-        <div
-          className={`absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/50 to-transparent flex flex-col items-center justify-center gap-4 transition-all duration-300 ${
-            isHovered ? "opacity-100" : "opacity-0"
-          }`}
-        >
-          <div className="flex gap-4">
-            <ProjectLink
-              href={project.githubLink}
-              icon={<GitHubIcon className="w-5 h-5" />}
-              label="View Code"
-              onClick={handleLinkClick}
-              disabled={!project.githubLink || project.githubLink === "#"}
-            />
-            <ProjectLink
-              href={project.demoLink}
-              icon={<ExternalLinkIcon className="w-5 h-5" />}
-              label="Live Demo"
-              onClick={handleLinkClick}
-              disabled={!project.demoLink || project.demoLink === "#"}
-            />
+          {/* Overlay with links */}
+          <div
+            className={`absolute inset-0 bg-gradient-to-t from-slate-900/95 via-slate-900/60 to-transparent flex flex-col items-center justify-center gap-4 transition-all duration-300 ${
+              isHovered ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            <div className="flex gap-4">
+              <ProjectLink
+                href={project.githubLink}
+                icon={<GitHubIcon className="w-5 h-5" />}
+                label="View Code"
+                onClick={handleLinkClick}
+                disabled={!project.githubLink || project.githubLink === "#"}
+              />
+              <ProjectLink
+                href={project.demoLink}
+                icon={<ExternalLinkIcon className="w-5 h-5" />}
+                label="Live Demo"
+                onClick={handleLinkClick}
+                disabled={!project.demoLink || project.demoLink === "#"}
+              />
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* Project Info */}
-      <div className="p-6">
-        <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300">
-          {project.title}
-        </h3>
-        <p className="text-slate-600 dark:text-slate-400 mb-5">
-          {project.shortDescription}
-        </p>
+        {/* Project Info */}
+        <div className="p-6">
+          <h3 className="text-xl font-bold text-stone-900 dark:text-stone-100 mb-3 group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors duration-300">
+            {project.title}
+          </h3>
+          <p className="text-slate-600 dark:text-slate-400 mb-5 line-clamp-2">
+            {project.shortDescription}
+          </p>
 
-        {/* Tech Stack */}
-        <div className="flex flex-wrap gap-2">
-          {project.techStack.map((tech) => (
-            <Badge
-              key={tech}
-              variant="primary"
-              size="sm"
-              className="transition-transform duration-200 hover:scale-105"
-            >
-              {tech}
-            </Badge>
-          ))}
+          {/* Tech Stack */}
+          <div className="flex flex-wrap gap-2">
+            {project.techStack.map((tech) => (
+              <Badge
+                key={tech}
+                variant="primary"
+                size="sm"
+                className="transition-all duration-200 hover:scale-105 hover:bg-orange-600 hover:text-white dark:hover:bg-orange-500/20 dark:hover:text-orange-400"
+              >
+                {tech}
+              </Badge>
+            ))}
+          </div>
         </div>
-      </div>
-    </Card>
+      </Card>
+    </div>
   );
 }
 

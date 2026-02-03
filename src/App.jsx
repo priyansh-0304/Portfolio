@@ -5,7 +5,7 @@ import { Hero, About, Projects, Skills, Contact } from './components/sections';
 function App() {
   return (
     <ThemeProvider>
-      <div className="min-h-screen bg-slate-300 dark:bg-slate-950 transition-colors duration-300">
+      <div className="min-h-screen bg-slate-300 dark:bg-stone-900 transition-colors duration-300">
         <Navbar />
         <main>
           <Hero />

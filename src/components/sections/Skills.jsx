@@ -21,20 +21,20 @@ const categoryIcons = {
 
 const colorVariants = {
   indigo: {
-    bg: "bg-indigo-500",
-    bgLight: "bg-indigo-100 dark:bg-indigo-900/30",
-    text: "text-indigo-600 dark:text-indigo-400",
-    gradient: "from-indigo-500 to-indigo-600",
-    bar: "from-indigo-500 via-indigo-400 to-indigo-600",
-    glow: "shadow-indigo-500/25",
+    bg: "bg-orange-500",
+    bgLight: "bg-orange-100 dark:bg-orange-900/30",
+    text: "text-orange-600 dark:text-orange-400",
+    gradient: "from-orange-500 to-orange-600",
+    bar: "from-orange-500 via-orange-400 to-orange-600",
+    glow: "shadow-orange-500/25",
   },
   teal: {
-    bg: "bg-teal-500",
-    bgLight: "bg-teal-100 dark:bg-teal-900/30",
-    text: "text-teal-600 dark:text-teal-400",
-    gradient: "from-teal-500 to-teal-600",
-    bar: "from-teal-500 via-teal-400 to-teal-600",
-    glow: "shadow-teal-500/25",
+    bg: "bg-amber-500",
+    bgLight: "bg-amber-100 dark:bg-amber-900/30",
+    text: "text-amber-600 dark:text-amber-400",
+    gradient: "from-amber-500 to-amber-600",
+    bar: "from-amber-500 via-amber-400 to-amber-600",
+    glow: "shadow-amber-500/25",
   },
   rose: {
     bg: "bg-rose-500",
@@ -45,12 +45,12 @@ const colorVariants = {
     glow: "shadow-rose-500/25",
   },
   amber: {
-    bg: "bg-amber-500",
-    bgLight: "bg-amber-100 dark:bg-amber-900/30",
-    text: "text-amber-600 dark:text-amber-400",
-    gradient: "from-amber-500 to-amber-600",
-    bar: "from-amber-500 via-amber-400 to-amber-600",
-    glow: "shadow-amber-500/25",
+    bg: "bg-stone-500",
+    bgLight: "bg-stone-100 dark:bg-stone-900/30",
+    text: "text-stone-600 dark:text-stone-400",
+    gradient: "from-stone-500 to-stone-600",
+    bar: "from-stone-500 via-stone-400 to-stone-600",
+    glow: "shadow-stone-500/25",
   },
 };
 
