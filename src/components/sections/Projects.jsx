@@ -1,7 +1,8 @@
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect, useRef } from "react";
 import projectsJson from "../../data/projects.json";
 import { Container, SectionHeader, Card, Badge, Button } from "../ui";
 import { GitHubIcon, ExternalLinkIcon } from "../icons";
+import { useScrollReveal } from "../../hooks";
 
 const { projects } = projectsJson;
 
@@ -163,15 +164,24 @@ function FilterButton({ children, active, onClick }) {
 
 function ProjectCard({ project, index, onClick }) {
   const [isHovered, setIsHovered] = useState(false);
+  const { ref, isVisible } = useScrollReveal({ threshold: 0.1, triggerOnce: true });
 
   const handleLinkClick = (e) => {
     e.stopPropagation();
   };
 
+  // Alternate left/right animation based on index
+  const isFromLeft = index % 2 === 0;
+
   return (
     <div
-      className="group relative animate-fade-in-up cursor-pointer"
-      style={{ animationDelay: `${index * 100}ms` }}
+      ref={ref}
+      className="group relative cursor-pointer transition-all duration-700 ease-out"
+      style={{ 
+        opacity: isVisible ? 1 : 0,
+        transform: isVisible ? 'translateX(0)' : `translateX(${isFromLeft ? '-50px' : '50px'})`,
+        transitionDelay: `${(index % 2) * 150}ms`
+      }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       onClick={onClick}
