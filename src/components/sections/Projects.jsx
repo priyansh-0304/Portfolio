@@ -102,7 +102,7 @@ export default function Projects() {
             </p>
             <button
               onClick={() => setActiveFilter("All")}
-              className="mt-4 text-indigo-600 dark:text-indigo-400 font-medium hover:underline"
+              className="mt-4 text-violet-600 dark:text-violet-400 font-medium hover:underline"
             >
               Clear filter
             </button>
@@ -114,7 +114,7 @@ export default function Projects() {
           <div className="text-center mt-12">
             <button
               onClick={() => setShowAll(!showAll)}
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border-2 border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-semibold hover:border-indigo-500 dark:hover:border-indigo-500 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-300"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border-2 border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 font-semibold hover:border-violet-500 dark:hover:border-violet-500 hover:text-violet-600 dark:hover:text-violet-400 transition-all duration-300"
             >
               {showAll ? (
                 <>
@@ -153,8 +153,8 @@ function FilterButton({ children, active, onClick }) {
       onClick={onClick}
       className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
         active
-          ? "bg-orange-600 text-white shadow-lg shadow-orange-500/25"
-          : "bg-stone-100 dark:bg-stone-800 text-stone-600 dark:text-stone-400 hover:bg-stone-200 dark:hover:bg-stone-700 hover:text-stone-900 dark:hover:text-white"
+          ? "bg-violet-600 text-white shadow-lg shadow-violet-500/25"
+          : "backdrop-blur-xl bg-white/70 dark:bg-white/5 border border-slate-200/50 dark:border-white/10 text-slate-600 dark:text-slate-400 hover:bg-white/90 dark:hover:bg-white/10 hover:text-violet-600 dark:hover:text-violet-400"
       }`}
     >
       {children}
@@ -186,18 +186,16 @@ function ProjectCard({ project, index, onClick }) {
       onMouseLeave={() => setIsHovered(false)}
       onClick={onClick}
     >
-      {/* Glow effect - appears on hover */}
+      {/* Glow shadow effect behind card */}
       <div 
-        className={`absolute -inset-0.5 bg-gradient-to-r from-orange-500 via-amber-500 to-yellow-400 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-all duration-500 ${
-          isHovered ? "opacity-75" : ""
-        }`}
+        className={`absolute -inset-1 rounded-2xl bg-violet-500/0 group-hover:bg-violet-500/20 blur-xl transition-all duration-500 dark:group-hover:bg-violet-500/30`}
       />
       
       {/* Card content */}
       <Card
         variant="elevated"
         padding="none"
-        className="relative overflow-hidden transform transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-2xl group-hover:shadow-orange-500/10"
+        className="relative overflow-hidden transform transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-2xl dark:border dark:border-white/10 dark:group-hover:border-violet-500/40"
       >
         {/* Project Image */}
         <div className="relative h-56 overflow-hidden">
@@ -212,7 +210,7 @@ function ProjectCard({ project, index, onClick }) {
           {/* Featured Badge */}
           {project.featured && (
             <div className="absolute top-4 left-4 z-10">
-              <span className="px-3 py-1 bg-gradient-to-r from-orange-600 to-amber-500 text-white text-xs font-semibold rounded-full shadow-lg">
+              <span className="px-3 py-1 bg-violet-600 text-white text-xs font-semibold rounded-full shadow-lg">
                 Featured
               </span>
             </div>
@@ -245,7 +243,7 @@ function ProjectCard({ project, index, onClick }) {
 
         {/* Project Info */}
         <div className="p-6">
-          <h3 className="text-xl font-bold text-stone-900 dark:text-stone-100 mb-3 group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors duration-300">
+          <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors duration-300">
             {project.title}
           </h3>
           <p className="text-slate-600 dark:text-slate-400 mb-5 line-clamp-2">
@@ -259,7 +257,7 @@ function ProjectCard({ project, index, onClick }) {
                 key={tech}
                 variant="primary"
                 size="sm"
-                className="transition-all duration-200 hover:scale-105 hover:bg-orange-600 hover:text-white dark:hover:bg-orange-500/20 dark:hover:text-orange-400"
+                className="transition-all duration-200 hover:scale-105 hover:bg-violet-600 hover:text-white dark:hover:bg-violet-500/20 dark:hover:text-violet-400"
               >
                 {tech}
               </Badge>
@@ -293,7 +291,7 @@ function ProjectLink({ href, icon, label, onClick, disabled }) {
       target="_blank"
       rel="noopener noreferrer"
       onClick={onClick}
-      className="group/link flex items-center gap-2 px-4 py-2 bg-slate-200/95 dark:bg-slate-800/95 rounded-xl hover:bg-indigo-600 transition-all duration-200 hover:scale-105 shadow-lg"
+      className="group/link flex items-center gap-2 px-4 py-2 bg-slate-200/95 dark:bg-slate-800/95 rounded-xl hover:bg-violet-600 transition-all duration-200 hover:scale-105 shadow-lg"
     >
       <span className="text-slate-900 dark:text-white group-hover/link:text-white transition-colors">
         {icon}
@@ -319,7 +317,7 @@ function ProjectModal({ project, onClose }) {
       
       {/* Modal Content */}
       <div 
-        className="relative w-full max-w-3xl bg-slate-100 dark:bg-slate-900 rounded-2xl shadow-2xl"
+        className="relative w-full max-w-3xl bg-slate-100 dark:bg-[#0c0a1d] rounded-2xl shadow-2xl border border-slate-200/50 dark:border-white/10"
         style={{ animation: 'modal-rise-up 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards' }}
         onClick={(e) => e.stopPropagation()}
       >
@@ -344,7 +342,7 @@ function ProjectModal({ project, onClose }) {
           {/* Featured Badge */}
           {project.featured && (
             <div className="absolute top-4 left-4">
-              <span className="px-4 py-1.5 bg-gradient-to-r from-indigo-600 to-rose-500 text-white text-sm font-semibold rounded-full shadow-lg">
+              <span className="px-4 py-1.5 bg-violet-600 text-white text-sm font-semibold rounded-full shadow-lg">
                 Featured Project
               </span>
             </div>
@@ -391,7 +389,7 @@ function ProjectModal({ project, onClose }) {
           </div>
 
           {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-3 pt-5 border-t border-slate-200 dark:border-slate-700">
+          <div className="flex flex-col sm:flex-row gap-3 pt-5 border-t border-slate-200 dark:border-white/10">
             <Button
               as={project.githubLink && project.githubLink !== "#" ? "a" : "button"}
               href={project.githubLink && project.githubLink !== "#" ? project.githubLink : undefined}

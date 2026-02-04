@@ -66,9 +66,9 @@ export default function Navbar() {
           <a
             href="#home"
             onClick={(e) => scrollToSection(e, "#home")}
-            className="text-2xl font-bold text-orange-600 dark:text-orange-400 hover:text-orange-700 dark:hover:text-orange-300 transition-all duration-300 hover:scale-105"
+            className="text-2xl font-bold text-violet-600 dark:text-violet-400 hover:text-violet-500 dark:hover:text-violet-300 transition-all duration-300 hover:scale-105"
           >
-            PA<span className="text-gradient-animate">.</span>
+            PA<span className="text-violet-400 dark:text-violet-500">.</span>
           </a>
 
           {/* Desktop Navigation */}
@@ -80,13 +80,13 @@ export default function Navbar() {
                 onClick={(e) => scrollToSection(e, link.href)}
                 className={`relative px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
                   activeSection === link.href.substring(1)
-                    ? "text-orange-600 dark:text-orange-400 bg-orange-50 dark:bg-orange-950/50"
-                    : "text-stone-600 dark:text-stone-300 hover:text-orange-600 dark:hover:text-orange-400 hover:bg-stone-100 dark:hover:bg-stone-800"
+                    ? "text-violet-600 dark:text-violet-400 bg-violet-50 dark:bg-violet-950/50"
+                    : "text-slate-600 dark:text-slate-300 hover:text-violet-600 dark:hover:text-violet-400 hover:bg-slate-100 dark:hover:bg-white/5"
                 }`}
               >
                 {link.name}
                 {activeSection === link.href.substring(1) && (
-                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1 h-1 bg-orange-500 rounded-full" />
+                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1 h-1 bg-violet-500 rounded-full" />
                 )}
               </a>
             ))}
@@ -94,7 +94,7 @@ export default function Navbar() {
             {/* Theme Toggle */}
             <button
               onClick={toggleDarkMode}
-              className="ml-4 p-2.5 rounded-xl bg-stone-100 dark:bg-stone-800 hover:bg-stone-200 dark:hover:bg-stone-700 transition-all duration-300 hover:scale-110"
+              className="ml-4 p-2.5 rounded-xl backdrop-blur-xl bg-white/70 dark:bg-white/5 border border-slate-200/50 dark:border-white/10 hover:bg-white/90 dark:hover:bg-white/10 transition-all duration-300 hover:scale-110"
               aria-label="Toggle dark mode"
             >
               <span 
@@ -114,7 +114,7 @@ export default function Navbar() {
           <div className="md:hidden flex items-center gap-2">
             <button
               onClick={toggleDarkMode}
-              className="p-2.5 rounded-xl bg-stone-100 dark:bg-stone-800 transition-all duration-300 hover:scale-105"
+              className="p-2.5 rounded-xl backdrop-blur-xl bg-white/70 dark:bg-white/5 border border-slate-200/50 dark:border-white/10 transition-all duration-300 hover:scale-105"
               aria-label="Toggle dark mode"
             >
               <span 
@@ -124,20 +124,20 @@ export default function Navbar() {
                 {darkMode ? (
                   <SunIcon className="w-5 h-5 text-amber-500" />
                 ) : (
-                  <MoonIcon className="w-5 h-5 text-stone-600" />
+                  <MoonIcon className="w-5 h-5 text-slate-600" />
                 )}
               </span>
             </button>
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="p-2.5 rounded-xl bg-stone-100 dark:bg-stone-800 transition-all duration-300"
+              className="p-2.5 rounded-xl backdrop-blur-xl bg-white/70 dark:bg-white/5 border border-slate-200/50 dark:border-white/10 transition-all duration-300"
               aria-label="Toggle menu"
             >
               <span className={`block transition-transform duration-300 ${isMobileMenuOpen ? 'rotate-90' : ''}`}>
                 {isMobileMenuOpen ? (
-                  <XIcon className="w-5 h-5 text-stone-700 dark:text-stone-300" />
+                  <XIcon className="w-5 h-5 text-slate-700 dark:text-slate-300" />
                 ) : (
-                  <MenuIcon className="w-5 h-5 text-stone-700 dark:text-stone-300" />
+                  <MenuIcon className="w-5 h-5 text-slate-700 dark:text-slate-300" />
                 )}
               </span>
             </button>
@@ -158,8 +158,8 @@ export default function Navbar() {
                 onClick={(e) => scrollToSection(e, link.href)}
                 className={`block py-3 px-4 rounded-xl font-medium transition-all duration-300 ${
                   activeSection === link.href.substring(1)
-                    ? "text-orange-600 dark:text-orange-400 bg-orange-50 dark:bg-orange-950/50"
-                    : "text-stone-700 dark:text-stone-300 hover:text-orange-600 dark:hover:text-orange-400 hover:bg-stone-100 dark:hover:bg-stone-800"
+                    ? "text-violet-600 dark:text-violet-400 bg-violet-50 dark:bg-violet-950/50"
+                    : "text-slate-700 dark:text-slate-300 hover:text-violet-600 dark:hover:text-violet-400 hover:bg-slate-100 dark:hover:bg-white/5"
                 }`}
                 style={{ 
                   transitionDelay: isMobileMenuOpen ? `${index * 50}ms` : '0ms',

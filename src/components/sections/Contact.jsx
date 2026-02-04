@@ -162,9 +162,9 @@ export default function Contact() {
             {/* Decorative element */}
             <div className="hidden lg:block pt-8">
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-amber-500 rounded-2xl blur-2xl opacity-20" />
+                <div className="absolute inset-0 bg-violet-500 rounded-2xl blur-2xl opacity-20" />
                 <Card variant="glass" className="relative p-6">
-                  <p className="text-stone-600 dark:text-stone-300 italic">
+                  <p className="text-slate-600 dark:text-slate-300 italic">
                     "Great things are built with collaboration. Let's create something amazing together."
                   </p>
                 </Card>
@@ -264,13 +264,13 @@ function FormField({
   
   const inputClasses = `
     w-full px-4 py-3 rounded-xl border-2 transition-all duration-200
-    bg-slate-200 dark:bg-slate-800
+    backdrop-blur-xl bg-white/70 dark:bg-white/5
     text-slate-900 dark:text-white
     placeholder:text-slate-400 dark:placeholder:text-slate-500
     focus:outline-none focus:ring-0
     ${error 
       ? "border-rose-500 dark:border-rose-500 focus:border-rose-500" 
-      : "border-slate-300 dark:border-slate-700 focus:border-indigo-500 dark:focus:border-indigo-500"
+      : "border-slate-200/50 dark:border-white/10 focus:border-violet-500 dark:focus:border-violet-500"
     }
     ${isTextarea ? "resize-none" : ""}
   `;
@@ -390,7 +390,7 @@ function StatusMessage({ status, onDismiss }) {
 function ContactItem({ icon, title, value, href }) {
   const content = (
     <div className="flex items-center gap-4">
-      <div className="flex-shrink-0 p-4 bg-indigo-100 dark:bg-indigo-900/40 rounded-xl text-indigo-600 dark:text-indigo-400 group-hover:bg-indigo-200 dark:group-hover:bg-indigo-800/40 transition-colors">
+      <div className="flex-shrink-0 p-4 bg-violet-100 dark:bg-violet-900/40 rounded-xl text-violet-600 dark:text-violet-400 group-hover:bg-violet-200 dark:group-hover:bg-violet-800/40 transition-colors">
         {icon}
       </div>
       <div>
@@ -406,7 +406,7 @@ function ContactItem({ icon, title, value, href }) {
         href={href}
         target={href.startsWith("mailto") ? undefined : "_blank"}
         rel={href.startsWith("mailto") ? undefined : "noopener noreferrer"}
-        className="group block p-2 -m-2 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+        className="group block p-2 -m-2 rounded-xl hover:bg-violet-50 dark:hover:bg-white/5 transition-colors"
       >
         {content}
       </a>

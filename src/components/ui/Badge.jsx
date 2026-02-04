@@ -1,9 +1,9 @@
 const variants = {
-  primary: 'bg-orange-100 text-orange-700 dark:bg-orange-900/40 dark:text-orange-300',
-  secondary: 'bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300',
-  accent: 'bg-rose-100 text-rose-700 dark:bg-rose-900/40 dark:text-rose-300',
-  surface: 'bg-stone-100 text-stone-700 dark:bg-stone-700 dark:text-stone-300',
-  outline: 'bg-transparent border border-stone-300 text-stone-600 dark:border-stone-600 dark:text-stone-400',
+  primary: 'bg-violet-100 text-violet-700 dark:bg-violet-900/40 dark:text-violet-300',
+  secondary: 'bg-rose-100 text-rose-700 dark:bg-rose-900/40 dark:text-rose-300',
+  accent: 'bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300',
+  surface: 'backdrop-blur-xl bg-white/70 dark:bg-white/5 text-slate-700 dark:text-slate-300 border border-slate-200/50 dark:border-white/10',
+  outline: 'bg-transparent border border-violet-300 text-violet-600 dark:border-violet-500/50 dark:text-violet-400',
 };
 
 const sizes = {

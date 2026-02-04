@@ -2,28 +2,27 @@ import { forwardRef } from 'react';
 
 const variants = {
   default: `
-    bg-stone-50 dark:bg-stone-800
-    border border-stone-200 dark:border-stone-700
+    bg-slate-50 dark:bg-white/5
+    border border-slate-200/50 dark:border-white/10
   `,
   elevated: `
-    bg-stone-50 dark:bg-stone-800
+    bg-slate-50 dark:bg-white/5
     shadow-lg hover:shadow-xl
-    dark:shadow-stone-900/20
+    dark:shadow-violet-900/10
   `,
   glass: `
-    bg-stone-50/70 dark:bg-stone-800/70
-    backdrop-blur-md
-    border border-stone-200/50 dark:border-stone-700/50
+    backdrop-blur-xl bg-white/70 dark:bg-white/5
+    border border-slate-200/50 dark:border-white/10
   `,
   gradient: `
-    bg-gradient-to-br from-stone-50 to-stone-100
-    dark:from-stone-800 dark:to-stone-900
-    border border-stone-200 dark:border-stone-700
+    bg-gradient-to-br from-slate-50 to-violet-50
+    dark:from-white/5 dark:to-violet-900/10
+    border border-slate-200/50 dark:border-white/10
   `,
   interactive: `
-    bg-stone-50 dark:bg-stone-800
+    bg-slate-50 dark:bg-white/5
     shadow-lg hover:shadow-xl
-    dark:shadow-stone-900/20
+    dark:shadow-violet-900/10
     cursor-pointer
   `,
 };
@@ -54,7 +53,7 @@ const Card = forwardRef(({
 
   const hoverEffects = {
     lift: 'hover:-translate-y-1 hover:shadow-xl',
-    glow: 'hover:shadow-lg hover:shadow-indigo-500/10 hover:border-indigo-200 dark:hover:border-indigo-800',
+    glow: 'hover:shadow-lg hover:shadow-violet-500/10 hover:border-violet-200 dark:hover:border-violet-500/30',
     scale: 'hover:scale-[1.02]',
     none: '',
   };

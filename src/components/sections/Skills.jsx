@@ -21,22 +21,14 @@ const categoryIcons = {
 
 const colorVariants = {
   indigo: {
-    bg: "bg-orange-500",
-    bgLight: "bg-orange-100 dark:bg-orange-900/30",
-    text: "text-orange-600 dark:text-orange-400",
-    gradient: "from-orange-500 to-orange-600",
-    bar: "from-orange-500 via-orange-400 to-orange-600",
-    glow: "shadow-orange-500/25",
+    bg: "bg-violet-500",
+    bgLight: "bg-violet-100 dark:bg-violet-900/30",
+    text: "text-violet-600 dark:text-violet-400",
+    gradient: "from-violet-500 to-violet-600",
+    bar: "from-violet-500 via-violet-400 to-violet-600",
+    glow: "shadow-violet-500/25",
   },
   teal: {
-    bg: "bg-amber-500",
-    bgLight: "bg-amber-100 dark:bg-amber-900/30",
-    text: "text-amber-600 dark:text-amber-400",
-    gradient: "from-amber-500 to-amber-600",
-    bar: "from-amber-500 via-amber-400 to-amber-600",
-    glow: "shadow-amber-500/25",
-  },
-  rose: {
     bg: "bg-rose-500",
     bgLight: "bg-rose-100 dark:bg-rose-900/30",
     text: "text-rose-600 dark:text-rose-400",
@@ -44,13 +36,21 @@ const colorVariants = {
     bar: "from-rose-500 via-rose-400 to-rose-600",
     glow: "shadow-rose-500/25",
   },
+  rose: {
+    bg: "bg-amber-500",
+    bgLight: "bg-amber-100 dark:bg-amber-900/30",
+    text: "text-amber-600 dark:text-amber-400",
+    gradient: "from-amber-500 to-amber-600",
+    bar: "from-amber-500 via-amber-400 to-amber-600",
+    glow: "shadow-amber-500/25",
+  },
   amber: {
-    bg: "bg-stone-500",
-    bgLight: "bg-stone-100 dark:bg-stone-900/30",
-    text: "text-stone-600 dark:text-stone-400",
-    gradient: "from-stone-500 to-stone-600",
-    bar: "from-stone-500 via-stone-400 to-stone-600",
-    glow: "shadow-stone-500/25",
+    bg: "bg-slate-500",
+    bgLight: "bg-slate-100 dark:bg-slate-900/30",
+    text: "text-slate-600 dark:text-slate-400",
+    gradient: "from-slate-500 to-slate-600",
+    bar: "from-slate-500 via-slate-400 to-slate-600",
+    glow: "shadow-slate-500/25",
   },
 };
 
@@ -81,7 +81,7 @@ export default function Skills() {
                 className={`flex items-center gap-2 px-5 py-3 rounded-xl font-semibold transition-all duration-300 ${
                   isActive
                     ? `bg-gradient-to-r ${colors.gradient} text-white shadow-lg ${colors.glow}`
-                    : "bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700"
+                    : "backdrop-blur-xl bg-white/70 dark:bg-white/5 border border-slate-200/50 dark:border-white/10 text-slate-600 dark:text-slate-400 hover:bg-white/90 dark:hover:bg-white/10"
                 }`}
               >
                 <IconComponent className="w-5 h-5" />
@@ -96,7 +96,7 @@ export default function Skills() {
           {/* Progress Bars Card */}
           <Card variant="elevated" className="p-8">
             <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-gradient-to-r from-indigo-500 to-rose-500" />
+              <span className="w-2 h-2 rounded-full bg-violet-500" />
               Proficiency Levels
             </h3>
             <div className="space-y-6">
@@ -114,7 +114,7 @@ export default function Skills() {
           {/* Skills Grid Card */}
           <Card variant="elevated" className="p-8">
             <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-gradient-to-r from-teal-500 to-indigo-500" />
+              <span className="w-2 h-2 rounded-full bg-violet-500" />
               Tech Stack
             </h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
@@ -129,7 +129,7 @@ export default function Skills() {
             </div>
 
             {/* Stats */}
-            <div className="mt-8 pt-6 border-t border-slate-200 dark:border-slate-700">
+            <div className="mt-8 pt-6 border-t border-slate-200 dark:border-white/10">
               <div className="grid grid-cols-3 gap-4 text-center">
                 <StatItem
                   value={skillsData[activeTab].skills.length}
@@ -163,7 +163,7 @@ export default function Skills() {
                 category.skills.map((skill) => (
                   <span
                     key={skill.name}
-                    className="px-4 py-2 bg-slate-100 dark:bg-slate-800 rounded-full text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-indigo-100 dark:hover:bg-indigo-900/30 hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors cursor-default"
+                    className="px-4 py-2 backdrop-blur-xl bg-white/70 dark:bg-white/5 border border-slate-200/50 dark:border-white/10 rounded-full text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-violet-100 dark:hover:bg-violet-900/30 hover:text-violet-700 dark:hover:text-violet-300 hover:border-violet-300 dark:hover:border-violet-500/50 transition-colors cursor-default"
                   >
                     {skill.icon} {skill.name}
                   </span>
@@ -208,7 +208,7 @@ function AnimatedSkillBar({ skill, color, delay }) {
       <div className="flex justify-between items-center mb-2">
         <div className="flex items-center gap-2">
           <span className="text-lg">{skill.icon}</span>
-          <span className="text-slate-700 dark:text-slate-300 font-medium group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+          <span className="text-slate-700 dark:text-slate-300 font-medium group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors">
             {skill.name}
           </span>
         </div>
@@ -216,7 +216,7 @@ function AnimatedSkillBar({ skill, color, delay }) {
           {width}%
         </span>
       </div>
-      <div className="h-3 bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+      <div className="h-3 bg-slate-200 dark:bg-white/10 rounded-full overflow-hidden">
         <div
           className={`h-full bg-gradient-to-r ${colors.bar} rounded-full transition-all duration-1000 ease-out relative`}
           style={{ width: `${width}%` }}
@@ -253,7 +253,7 @@ function SkillBadge({ skill, color, delay }) {
   return (
     <div
       ref={badgeRef}
-      className={`relative p-4 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-indigo-300 dark:hover:border-indigo-600 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 cursor-default ${
+      className={`relative p-4 rounded-xl backdrop-blur-xl bg-white/70 dark:bg-white/5 border border-slate-200/50 dark:border-white/10 hover:border-violet-300 dark:hover:border-violet-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-violet-500/10 hover:-translate-y-1 cursor-default ${
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
       }`}
       style={{ transitionDelay: `${delay}ms` }}
@@ -267,7 +267,7 @@ function SkillBadge({ skill, color, delay }) {
       {/* Level indicator */}
       <div className="absolute top-2 right-2">
         {skill.level >= 90 && (
-          <span className="text-xs px-2 py-0.5 bg-gradient-to-r from-amber-400 to-amber-500 text-white rounded-full font-bold">
+          <span className="text-xs px-2 py-0.5 bg-violet-500 text-white rounded-full font-bold">
             PRO
           </span>
         )}

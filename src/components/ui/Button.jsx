@@ -2,34 +2,31 @@ import { forwardRef } from 'react';
 
 const variants = {
   primary: `
-    bg-orange-500 text-white
-    hover:bg-orange-600
-    active:bg-orange-700
-    shadow-lg shadow-orange-500/25 hover:shadow-orange-500/40
-    dark:bg-orange-500 dark:hover:bg-orange-400
+    bg-violet-600 text-white
+    hover:bg-violet-700
+    active:bg-violet-800
+    shadow-lg shadow-violet-500/25 hover:shadow-violet-500/40
   `,
   secondary: `
-    bg-transparent text-orange-600
-    border-2 border-orange-500
-    hover:bg-orange-50
-    active:bg-orange-100
-    dark:text-orange-400 dark:border-orange-400
-    dark:hover:bg-orange-950/50
+    bg-transparent text-violet-600
+    border-2 border-violet-500
+    hover:bg-violet-50
+    active:bg-violet-100
+    dark:text-violet-400 dark:border-violet-400
+    dark:hover:bg-violet-950/50
   `,
   ghost: `
-    bg-stone-100 text-stone-700
-    border border-stone-300
-    hover:bg-stone-200 hover:border-stone-400
-    active:bg-stone-300
-    dark:bg-transparent dark:text-stone-300 dark:border-stone-600
-    dark:hover:bg-stone-800 dark:hover:border-stone-500
+    backdrop-blur-xl bg-white/70 dark:bg-white/5 text-slate-700
+    border border-slate-200/50 dark:border-white/10
+    hover:bg-white/90 dark:hover:bg-white/10 hover:border-violet-300 dark:hover:border-violet-500/50
+    active:bg-white dark:active:bg-white/15
+    dark:text-slate-300
   `,
   accent: `
-    bg-amber-500 text-white
-    hover:bg-amber-600
-    active:bg-amber-700
-    shadow-lg
-    dark:bg-amber-500 dark:hover:bg-amber-400
+    bg-violet-500 text-white
+    hover:bg-violet-600
+    active:bg-violet-700
+    shadow-lg shadow-violet-500/25 hover:shadow-violet-500/40
   `,
 };
 
@@ -58,8 +55,8 @@ const Button = forwardRef(({
     font-semibold rounded-xl
     transition-all duration-300 ease-out
     transform hover:-translate-y-0.5
-    focus:outline-none focus:ring-2 focus:ring-orange-500/50 focus:ring-offset-2
-    dark:focus:ring-offset-stone-900
+    focus:outline-none focus:ring-2 focus:ring-violet-500/50 focus:ring-offset-2
+    dark:focus:ring-offset-[#0c0a1d]
     disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none disabled:hover:shadow-none
   `;
 
