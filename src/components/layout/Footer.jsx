@@ -6,7 +6,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#cdc7dc] dark:bg-[#0c0a1d] text-slate-900 dark:text-white py-16 relative overflow-hidden">
+    <footer className="bg-[#d9d9d9] dark:bg-[#0c0a1d] text-slate-900 dark:text-white py-16 relative overflow-hidden">
       {/* Subtle gradient orb */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-32 bg-violet-500/10 blur-3xl pointer-events-none" />
       

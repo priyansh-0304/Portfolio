@@ -188,7 +188,7 @@ function ProjectCard({ project, index, onClick }) {
     >
       {/* Glow shadow effect behind card */}
       <div 
-        className={`absolute -inset-1 rounded-2xl bg-violet-500/0 group-hover:bg-violet-500/20 blur-xl transition-all duration-500 dark:group-hover:bg-violet-500/30`}
+        className={`absolute -inset-1 rounded-2xl bg-violet-500/0 group-hover:bg-violet-500/40 blur-xl transition-all duration-500 dark:group-hover:bg-violet-500/30`}
       />
       
       {/* Card content */}

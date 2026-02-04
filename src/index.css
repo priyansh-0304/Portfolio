@@ -178,7 +178,7 @@ html {
 
 body {
   font-family: var(--font-family-sans);
-  background-color: #d8d3e5;
+  background-color: #e5e5e5;
   color: #1a1625;
   transition: background-color 0.3s, color 0.3s;
 }

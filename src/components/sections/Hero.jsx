@@ -16,7 +16,7 @@ export default function Hero() {
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
       {/* Background - matches App.jsx */}
-      <div className="absolute inset-0 bg-[#d8d3e5] dark:bg-[#0c0a1d]" />
+      <div className="absolute inset-0 bg-[#e5e5e5] dark:bg-[#0c0a1d]" />
 
       <Container className="relative z-20 py-20">
         <div className="max-w-3xl mx-auto">
